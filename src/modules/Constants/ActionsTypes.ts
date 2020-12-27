@@ -1,0 +1,10 @@
+export const ADD_TASK = 'ADD_TASK';
+export const CREATE_TASK = 'CREATE_TASK';
+export const EDIT_TASK = 'EDIT_TASK';
+export const UPDATE_TASK = 'UPDATE_TASK';
+export const DELETE_TASK = 'DELETE_TASK';
+export const OPEN_CREATE_TASK = 'OPEN_CREATE_TASK';
+export const FETCH_TASK_LIST = 'FETCH_TASK_LIST';
+export const OPEN_TASK_FORM = 'OPEN_TASK_FORM';
+export const CLOSE_TASK_FORM = 'CLOSE_TASK_FORM';
+export const GET_TASK_VALUES = 'GET_TASK_VALUES';

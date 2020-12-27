@@ -1,0 +1,330 @@
+@font-face {
+  font-family: 'icon-ants';
+  src:  url('../fonts/icon-ants.eot?1fuodx');
+  src:  url('../fonts/icon-ants.eot?1fuodx#iefix') format('embedded-opentype'),
+    url('../fonts/icon-ants.ttf?1fuodx') format('truetype'),
+    url('../fonts/icon-ants.woff?1fuodx') format('woff'),
+    url('../fonts/icon-ants.svg?1fuodx#icon-ants') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-ants-"], [class*=" icon-ants-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-ants' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ants-menu:before {
+  content: "\1f3fd";
+}
+.icon-ants-add-square:before {
+  content: "\229e";
+}
+.icon-ants-minus-square:before {
+  content: "\229f";
+}
+.icon-ants-invisible:before {
+  content: "\2300";
+}
+.icon-ants-caret-left:before {
+  content: "\23f4";
+}
+.icon-ants-caret-right:before {
+  content: "\23f5";
+}
+.icon-ants-caret-up:before {
+  content: "\23f6";
+}
+.icon-ants-caret-down:before {
+  content: "\23f7";
+}
+.icon-ants-black-square:before {
+  content: "\25a0";
+}
+.icon-ants-square-outline:before {
+  content: "\25a2";
+}
+.icon-ants-delta:before {
+  content: "\25b3";
+}
+.icon-ants-five-dots:before {
+  content: "\2600";
+}
+.icon-ants-bars:before {
+  content: "\2630";
+}
+.icon-ants-double-four-dots:before {
+  content: "\2636";
+}
+.icon-ants-double-three-dots:before {
+  content: "\2637";
+}
+.icon-ants-danger:before {
+  content: "\26a0";
+}
+.icon-ants-trigger:before {
+  content: "\26a1";
+}
+.icon-ants-warning-circle:before {
+  content: "\26ab";
+}
+.icon-ants-remove-circle:before {
+  content: "\26d2";
+}
+.icon-ants-check-small:before {
+  content: "\2714";
+}
+.icon-ants-add:before {
+  content: "\271a";
+}
+.icon-ants-fullscreen-exit:before {
+  content: "\2733";
+}
+.icon-ants-scatter-chart:before {
+  content: "\2744";
+}
+.icon-ants-angle-left:before {
+  content: "\276c";
+}
+.icon-ants-angle-right:before {
+  content: "\276d";
+}
+.icon-ants-step-backward:before {
+  content: "\2770";
+}
+.icon-ants-step-forward:before {
+  content: "\2771";
+}
+.icon-ants-undo1:before {
+  content: "\27f5";
+}
+.icon-ants-redo:before {
+  content: "\27f6";
+}
+.icon-ants-back:before {
+  content: "\2900";
+}
+.icon-ants-front:before {
+  content: "\2901";
+}
+.icon-ants-send-to-back:before {
+  content: "\2902";
+}
+.icon-ants-bring-to-front:before {
+  content: "\2903";
+}
+.icon-ants-upload:before {
+  content: "\2912";
+}
+.icon-ants-download:before {
+  content: "\2913";
+}
+.icon-ants-double-arrow-up:before {
+  content: "\2b99";
+}
+.icon-ants-three-dot-vertical:before {
+  content: "\e00f";
+}
+.icon-ants-multi-monitor:before {
+  content: "\e908";
+}
+.icon-ants-clock-twinkle:before {
+  content: "\f060";
+}
+.icon-ants-arrow-alt-down:before {
+  content: "\f095";
+}
+.icon-ants-arrow-alt-up:before {
+  content: "\f096";
+}
+.icon-ants-clock-error:before {
+  content: "\f200";
+}
+.icon-ants-star:before {
+  content: "\f3a1";
+}
+.icon-ants-pie-chart:before {
+  content: "\1f300";
+}
+.icon-ants-picture:before {
+  content: "\1f304";
+}
+.icon-ants-image:before {
+  content: "\1f306";
+}
+.icon-ants-leapfrogging:before {
+  content: "\1f30a";
+}
+.icon-ants-area-chart:before {
+  content: "\1f30b";
+}
+.icon-ants-earth:before {
+  content: "\1f30d";
+}
+.icon-ants-geo-map:before {
+  content: "\1f30e";
+}
+.icon-ants-arrow-down:before {
+  content: "\1f30f";
+}
+.icon-ants-circle-outline:before {
+  content: "\1f310";
+}
+.icon-ants-switch-side-panel:before {
+  content: "\1f317";
+}
+.icon-ants-arrow-up:before {
+  content: "\1f31a";
+}
+.icon-ants-bar-chart:before {
+  content: "\1f31c";
+}
+.icon-ants-bar:before {
+  content: "\1f32e";
+}
+.icon-ants-ABC:before {
+  content: "\1f338";
+}
+.icon-ants-123:before {
+  content: "\1f339";
+}
+.icon-ants-coding:before {
+  content: "\1f33a";
+}
+.icon-ants-table:before {
+  content: "\1f354";
+}
+.icon-ants-pivot-chart:before {
+  content: "\1f39c";
+}
+.icon-ants-bullet-chart:before {
+  content: "\1f3b9";
+}
+.icon-ants-flag:before {
+  content: "\1f3f4";
+}
+.icon-ants-copy-report:before {
+  content: "\1f3fb";
+}
+.icon-ants-db-oracle:before {
+  content: "\1f3fe";
+}
+.icon-ants-undo:before {
+  content: "\1f465";
+}
+.icon-ants-user:before {
+  content: "\1f466";
+}
+.icon-ants-uni1F4A1:before {
+  content: "\1f4a1";
+}
+.icon-ants-uni1F4A2:before {
+  content: "\1f4a2";
+}
+.icon-ants-scorecard:before {
+  content: "\1f4a3";
+}
+.icon-ants-line-chart:before {
+  content: "\1f4ac";
+}
+.icon-ants-floppy-disk:before {
+  content: "\1f4be";
+}
+.icon-ants-note:before {
+  content: "\1f4c4";
+}
+.icon-ants-calendar:before {
+  content: "\1f4c5";
+}
+.icon-ants-calendar-small:before {
+  content: "\1f4c6";
+}
+.icon-ants-tree-map:before {
+  content: "\1f4d0";
+}
+.icon-ants-delete:before {
+  content: "\1f4db";
+}
+.icon-ants-info:before {
+  content: "\1f4e2";
+}
+.icon-ants-smart-phone:before {
+  content: "\1f4f1";
+}
+.icon-ants-padlock:before {
+  content: "\1f512";
+}
+.icon-ants-open-in-new-window:before {
+  content: "\1f513";
+}
+.icon-ants-crop:before {
+  content: "\1f528";
+}
+.icon-ants-filter:before {
+  content: "\1f53b";
+}
+.icon-ants-delay:before {
+  content: "\1f558";
+}
+.icon-ants-history:before {
+  content: "\1f55d";
+}
+.icon-ants-academy:before {
+  content: "\1f56e";
+}
+.icon-ants-search:before {
+  content: "\1f575";
+}
+.icon-ants-view:before {
+  content: "\1f576";
+}
+.icon-ants-cursor:before {
+  content: "\1f589";
+}
+.icon-ants-uni1F59F:before {
+  content: "\1f59f";
+}
+.icon-ants-uni1F5A0:before {
+  content: "\1f5a0";
+}
+.icon-ants-desktop:before {
+  content: "\1f5b3";
+}
+.icon-ants-diagram:before {
+  content: "\1f5bd";
+}
+.icon-ants-enrol:before {
+  content: "\1f5c7";
+}
+.icon-ants-full-screen:before {
+  content: "\1f5d6";
+}
+.icon-ants-text:before {
+  content: "\1f5da";
+}
+.icon-ants-exclamation:before {
+  content: "\1f5e1";
+}
+.icon-ants-remove:before {
+  content: "\1f5f4";
+}
+.icon-ants-check:before {
+  content: "\1f5f8";
+}
+.icon-ants-send:before {
+  content: "\1f6e7";
+}
+.icon-ants-home:before {
+  content: "\1f4fc";
+}

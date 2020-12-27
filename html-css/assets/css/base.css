@@ -1,0 +1,39 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    color: #202020;
+}
+
+body {
+    margin:0;
+}
+.grid {
+    width: 1452px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.grid__column-3 {
+    width: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.grid__column-9 {
+    width:75%;
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <title>To do list</title>
+</head>
+<body>
+    <div class="todo-app">
+        <div class="header">
+            <div class="grid">
+                <div class="header__navbar">
+                    <ul class="header__navbar-list header__navbar-list-left-control">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <svg class="header__navbar__menu-icon"  width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="white" fill-rule="evenodd" d="M4.5 5h15a.5.5 0 1 1 0 1h-15a.5.5 0 0 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1zm0 6h15a.5.5 0 1 1 0 1h-15a.5.5 0 1 1 0-1z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <svg class="header__navbar__menu-icon" width="24" height="24" viewBox="0 0 24 24" >
+                                    <path fill="white" d="M12.527 3.075c.35.104.64.263 1.27.876L19.1 9.123c.374.364.49.505.601.678.11.174.185.351.232.552.042.178.062.34.066.742L20 17.718c0 .446-.046.607-.134.77a.906.906 0 01-.378.378c-.163.088-.324.134-.77.134H14v-4.718c0-.446-.046-.607-.134-.77a.906.906 0 00-.378-.378c-.142-.077-.284-.122-.616-.132L12.718 13h-1.436c-.446 0-.607.046-.77.134a.906.906 0 00-.378.378c-.077.142-.122.284-.132.616l-.002.154V19H5.282c-.446 0-.607-.046-.77-.134a.906.906 0 01-.378-.378c-.088-.163-.134-.324-.134-.77v-6.462c0-.522.02-.703.067-.903.047-.2.121-.378.232-.552l.077-.113c.098-.134.233-.282.524-.565l5.304-5.172c.629-.613.92-.772 1.269-.876a1.82 1.82 0 011.054 0zm-.286.958a.825.825 0 00-.482 0c-.18.054-.326.139-.63.418l-.227.216L5.598 9.84c-.3.293-.385.39-.456.5a.76.76 0 00-.102.242c-.026.112-.037.224-.04.531l.002 6.807.005.073.074.006L8.999 18 9 14.268l.003-.17c.013-.448.083-.749.249-1.058a1.9 1.9 0 01.788-.788c.306-.164.6-.234 1.043-.249l.199-.003h1.45l.17.003c.448.013.749.083 1.058.249.337.18.608.45.788.788.164.306.234.6.249 1.043l.003.199L14.999 18l3.92-.002.073-.006.006-.073.002-.2v-6.615l-.005-.218a1.494 1.494 0 00-.035-.305.747.747 0 00-.102-.242l-.059-.084a3.571 3.571 0 00-.294-.315l-5.407-5.273c-.425-.414-.604-.545-.798-.615l-.06-.019z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <div class="header__navbar-item-search-bar">
+                                <svg class="header__navbar-item-search-bar-icon" width="24" height="24" aria-hidden="true" style="margin-left:4px;" >
+                                    <g fill="none" fill-rule="evenodd" transform="translate(4 4)">
+                                        <mask id="sm1/search/b" fill="#fff">
+                                            <path id="sm1/search/a" d="M11.44 10.73l4.41 4.42a.5.5 0 0 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.71zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z"></path>
+                                        </mask>
+                                        <g mask="url(#sm1/search/b)">
+                                            <path fill="white" d="M-3-4h24v24H-4z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <input type="text" class="header__navbar-item-search-bar-input" placeholder="Find">
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list header__navbar-list-right-control">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <svg class="header__navbar__menu-icon" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
+                                        <mask id="jd4FBg" fill="#fff">
+                                            <path d="M9 8h7a.5.5 0 1 1 0 1H9v7a.5.5 0 1 1-1 0V9H1a.5.5 0 0 1 0-1h7V1a.5.5 0 0 1 1 0v7z"></path>
+                                        </mask>
+                                        <g mask="url(#jd4FBg)">
+                                            <path fill="white" d="M-4-3h24v24H-4z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <div class="header__navbar-item-link-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <defs></defs>
+                                        <g fill="none" fill-rule="evenodd" transform="translate(3 3)">
+                                            <mask id="4ZtaWA" fill="#fff">
+                                                <path id="a" d="M12.3 5L7 10.3 5.4 8.6a.5.5 0 0 0-.8 0l-3.9 4a9 9 0 1 1 .5.9L5 9.7l1.6 1.7a.5.5 0 0 0 .8 0L13 5.7v3.8a.5.5 0 1 0 1 0v-5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.8z"></path>
+                                            </mask>
+                                            <g mask="url(#4ZtaWA)">
+                                                <path fill="white" d="M-3-3h24v24H-3z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span class="header__navbar-item-link-check-number">0/5</span>
+                                </div>    
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <svg class="header__navbar__menu-icon" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
+                                        <mask id="sm1/notifications/b" fill="#fff">
+                                            <path id="sm1/notifications/a" d="M10.8 16a3 3 0 0 1-5.6 0h5.6zM5 15h6-6zm-3.8 0a1 1 0 0 1-.8-1.5 16 16 0 0 0 2.1-8 5.5 5.5 0 0 1 11 0c0 2.8.7 5.5 2.1 8a1 1 0 0 1-.8 1.5H1.2z"></path>
+                                        </mask><g mask="url(#sm1/notifications/b)">
+                                            <path fill="white" d="M-4-3h24v24H-4z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <svg class="header__navbar__menu-icon" width="24" height="24" viewBox="0 0 24 24" >
+                                    <path fill="white" fill-rule="nonzero" d="M16.523 6.38l1.193-.598a1 1 0 0 1 1.314.394l1.529 2.648a1 1 0 0 1-.317 1.335l-1.204.793a7.263 7.263 0 0 1-.026 2.079l1.23.81a1 1 0 0 1 .317 1.335l-1.529 2.648a1 1 0 0 1-1.314.394l-1.345-.674a7.194 7.194 0 0 1-1.757 1.027l-.087 1.488a1 1 0 0 1-.998.941H10.47a1 1 0 0 1-.998-.941L9.39 18.65a7.188 7.188 0 0 1-1.883-1.045l-1.223.613a1 1 0 0 1-1.314-.394l-1.529-2.648a1 1 0 0 1 .317-1.335l1.05-.692a7.242 7.242 0 0 1-.03-2.318l-1.02-.672a1 1 0 0 1-.317-1.335L4.97 6.176a1 1 0 0 1 1.314-.394l1.068.536a7.191 7.191 0 0 1 2.05-1.173l.071-1.204A1 1 0 0 1 10.471 3h3.058a1 1 0 0 1 .998.941l.075 1.283a7.197 7.197 0 0 1 1.921 1.156zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="app-container">
+            <div class="grid">
+                <div class="grid__row app-content">
+                    <div class="grid__column-3 grid__column-3--separate">
+                        <div class="grid__column-3-scroll-bar scrollbar">
+                            <ul class="main-menu">
+                                <li class="menu-item">
+                                    <a href="" class="menu-item-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="#246FE0" fill-rule="nonzero">
+                                                <path d="M10 14.5a2 2 0 104 0h5.5V18a1.5 1.5 0 01-1.5 1.5H6A1.5 1.5 0 014.5 18v-3.5H10z" opacity="0.1"></path>
+                                                <path d="M8.062 4h7.876a2 2 0 011.94 1.515l2.062 8.246a2 2 0 01.06.485V18a2 2 0 01-2 2H6a2 2 0 01-2-2v-3.754a2 2 0 01.06-.485l2.06-8.246A2 2 0 018.061 4zm0 1a1 1 0 00-.97.757L5.03 14.004a1 1 0 00-.03.242V18a1 1 0 001 1h12a1 1 0 001-1v-3.754a1 1 0 00-.03-.242l-2.06-8.247A1 1 0 0015.94 5H8.061zM12 17.25A2.75 2.75 0 019.295 15H7a.5.5 0 110-1h2.75a.5.5 0 01.5.5 1.75 1.75 0 003.5 0 .5.5 0 01.5-.5H17a.5.5 0 110 1h-2.295A2.75 2.75 0 0112 17.25z"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="menu-item-work">Inbox</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-item-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="#058527" fill-rule="evenodd">
+                                                <path fill-rule="nonzero" d="M6 4.5h12A1.5 1.5 0 0 1 19.5 6v2.5h-15V6A1.5 1.5 0 0 1 6 4.5z" opacity=".1"></path>
+                                                <path fill-rule="nonzero" d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm1 3h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z"></path>
+                                                <text font-family="-apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" font-size="9" transform="translate(4 2)" font-weight="500">
+                                                    <tspan x="8" y="15" text-anchor="middle">24</tspan>
+                                                </text>
+                                            </g>
+                                        </svg>
+                                        <span class="menu-item-work">Today</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="" class="menu-item-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="#692FC2" fill-rule="nonzero">
+                                                <path d="M6 4.5h12A1.5 1.5 0 0119.5 6v2.5h-15V6A1.5 1.5 0 016 4.5z" opacity="0.1"></path>
+                                                <path d="M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zm0 1a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V6a1 1 0 00-1-1H6zm10 12a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm8-4a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zm-4 0a1 1 0 110-2 1 1 0 010 2zM7 8h10a.5.5 0 110 1H7a.5.5 0 010-1z"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="menu-item-work">Upcoming</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item menu-item-hover">
+                                    <a href="" class="menu-item-link menu-item-link--extension">                                   
+                                        <div class="menu-item-work-wrapper">
+                                            <svg width="16px" height="16px" viewBox="0 0 16 16">                                        
+                                                <g transform="translate(-266, -17)" fill="#777777">
+                                                    <path d="M280,22.7581818 L279.1564,22 L273.9922,26.506 L273.4414,26.0254545 L273.4444,26.0281818 L268.8562,22.0245455 L268,22.7712727 C269.2678,23.878 272.8084,26.9674545 273.9922,28 C274.8718,27.2330909 274.0144,27.9809091 280,22.7581818"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="menu-item-work">Projects</span>
+                                        </div>
+                                        
+                                        <svg class="menu-item-link-plus-icon" width="13" height="13">
+                                            <path class="menu-item-link-plus-icon-path" d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="#999" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <div class="menu-item-expansion-panel">
+    
+                                        <div class="menu-item-reactist-collapse">
+                                            <div class="collapse__wrapper">
+                                                <div class="collapse__wrapper_inner">
+                                                    <ul class="collapse__wrapper-list">
+                                                        <li class="collapse__wrapper-list-item">                                                        
+                                                            <div class="collapse__wrapper-list-item-project">
+                                                                <div class="collapse__wrapper-list-item-move">
+                                                                    <svg width="24" height="24">
+                                                                        <path fill="currentColor" d="M14.5 15.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 15.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 15.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 10.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 10.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 5.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 5.5z"></path>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="black-circle"></div>
+                                                                <span class="collapse__wrapper-list-item-project-text">Welcome</span>
+                                                                <span class="collapse__wrapper-list-item-project-emoji">
+                                                                    <img draggable="false" alt="👋" src="https://twemoji.maxcdn.com/2/72x72/1f44b.png">
+                                                                </span>
+                                                                <div class="collapse__wrapper-list-item-project-counter">9</div>
+                                                            </div>
+    
+                                                            <div class="collapse__wrapper-list-item-more">                                          
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="3" data-svgs-path="sm1/more_small.svg">
+                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="menu-item-reactist-collapse">
+                                            <div class="collapse__wrapper">
+                                                <div class="collapse__wrapper_inner">
+                                                    <ul class="collapse__wrapper-list">
+                                                        <li class="collapse__wrapper-list-item">                                                        
+                                                            <div class="collapse__wrapper-list-item-project">
+                                                                <div class="collapse__wrapper-list-item-move">
+                                                                    <svg width="24" height="24">
+                                                                        <path fill="currentColor" d="M14.5 15.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 15.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 15.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 10.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 10.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 5.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 5.5z"></path>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="black-circle"></div>
+                                                                <span class="collapse__wrapper-list-item-project-text">Welcome</span>
+                                                                <div class="collapse__wrapper-list-item-project-counter">1</div>
+                                                            </div>
+    
+                                                            <div class="collapse__wrapper-list-item-more">                                          
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="3" data-svgs-path="sm1/more_small.svg">
+                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="menu-item-expansion-panel-add-project">
+                                            <span class="app-content-list-item-icon-add-label  project-padding-icon">
+                                                <svg class="app-content-list-item-icon-add" width="13" height="13">
+                                                    <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="#dd4b39" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-item-expansion-panel-add-project-text">Add project</span>
+                                        </div>
+    
+                                        <div class="menu-item-expansion-panel-archived-project">
+                                            Archived projects
+                                        </div>
+                                    </div>
+    
+                                </li>
+                                <li class="menu-item menu-item-hover">
+                                    <a href="" class="menu-item-link menu-item-link--extension">
+                                        <div class="menu-item-work-wrapper">
+                                            <svg width="16px" height="16px" viewBox="0 0 16 16">
+                                                <g transform="translate(-266, -17)" fill="#777777">
+                                                <path d="M280,22.7581818 L279.1564,22 L273.9922,26.506 L273.4414,26.0254545 L273.4444,26.0281818 L268.8562,22.0245455 L268,22.7712727 C269.2678,23.878 272.8084,26.9674545 273.9922,28 C274.8718,27.2330909 274.0144,27.9809091 280,22.7581818"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="menu-item-work">Labels</span>
+                                        </div>
+    
+                                        <svg class="menu-item-link-plus-icon" width="13" height="13">
+                                            <path class="menu-item-link-plus-icon-path" d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="#999" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu-item menu-item-hover">
+                                    <a href="" class="menu-item-link menu-item-link--extension">
+                                        <div class="menu-item-work-wrapper">
+                                            <svg width="16px" height="16px" viewBox="0 0 16 16">
+                                                <g transform="translate(-266, -17)" fill="#777777">
+                                                    <path d="M280,22.7581818 L279.1564,22 L273.9922,26.506 L273.4414,26.0254545 L273.4444,26.0281818 L268.8562,22.0245455 L268,22.7712727 C269.2678,23.878 272.8084,26.9674545 273.9922,28 C274.8718,27.2330909 274.0144,27.9809091 280,22.7581818"></path>
+                                                </g>
+                                            </svg>
+                                            <span class="menu-item-work">Filters</span>
+                                        </div>
+    
+                                        <svg class="menu-item-link-plus-icon" width="13" height="13">
+                                            <path class="menu-item-link-plus-icon-path" d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="#999" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+    
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Assigned to me</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Assigned to pthers</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div> 
+    
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Priority 1</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div> 
+
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Priority 1</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Priority 1</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Priority 1</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="menu-item-filter-category">
+                                        <div class="menu-item-filter-category-move" draggable="true">
+                                            <svg width="24" height="24">
+                                                <path d="M9.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-5-5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+    
+                                        <div class="menu-item-filter-category-content">
+                                            <span class="menu-item-filter-category-content-icon" style="color: rgb(128, 128, 128);">
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12 19a5 5 0 0 0 5-5c0-1.102-.345-2-1.064-3.03-.259-.371-1.414-1.832-1.697-2.225-.775-1.077-1.338-2.124-1.765-3.403a.5.5 0 0 0-.948 0c-.427 1.28-.99 2.326-1.765 3.403-.283.393-1.438 1.854-1.697 2.225C7.344 12 7 12.898 7 14a5 5 0 0 0 5 5z"></path>
+                                                </svg>
+                                            </span>
+    
+                                            <span class="menu-item-filter-category-content-text">Priority 1</span>
+                                        </div>
+    
+                                        <button type="button" class="menu-item-filter-category-btn" >
+                                            <svg width="15" height="3">
+                                                <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="grid__column-9">
+                        <div class="app-content">
+                            <div class="app-content-header">
+                                <div class="app-content-header-name-and-date-wrapper">
+                                    <span class="app-content-header-name">
+                                        Today
+                                    </span>
+                                    <span class="app-content-header-date">
+                                        Tue 24 Nov
+                                    </span>
+                                </div>
+
+                                <button class="app-content-header-btn-sort" type="button">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M16.854 5.146l3 3a.502.502 0 01-.708.708L17 6.707V18.5a.5.5 0 01-1 0V6.707l-2.146 2.147a.502.502 0 01-.708-.708l3-3a.502.502 0 01.708 0zM7.5 5a.5.5 0 01.5.5v11.791l2.146-2.145a.502.502 0 01.708.708l-3 3a.502.502 0 01-.708 0l-3-3a.502.502 0 01.708-.708L7 17.293V5.5a.5.5 0 01.5-.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="app-content-list">
+                                <li class="app-content-list-item">
+                                    <div class="app-content-list-item-container">
+                                        <div class="app-content-list-item-circle-move-and-text-wrapper">
+                                            <span class="app-content-list-item-move-item">
+                                                <svg width="24" height="24">
+                                                    <path fill="currentColor" d="M14.5 15.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 15.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 15.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 10.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 10.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 5.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 5.5z"></path>
+                                                </svg>
+                                            </span>
+                                            <button class="app-content-list-item-circle" type="button" role="checkbox">
+                                                <svg class="app-content-list-item-circle-check-icon" width="24  " height="24">
+                                                    <path fill="currentColor" d="M11.23 13.7l-2.15-2a.55.55 0 0 0-.74-.01l.03-.03a.46.46 0 0 0 0 .68L11.24 15l5.4-5.01a.45.45 0 0 0 0-.68l.02.03a.55.55 0 0 0-.73 0l-4.7 4.35z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="app-content-list-item-text">Quê hương em mới tươi đẹp làm sao! Những con đường làng quanh co trải dài típ tắp. Hai bên đường là những lũy tre xanh rì rào trong gió. Con đường đất trải dài đến vô tận. Bốn mùa xuân, hạ, thu, đông, quê hương em đều có những vẻ đẹp rất riêng. Xuân về quê em như thay áo mới, màu sắc của chồi non của hoa màu bung nở rực rỡ làm lên một vùng đất trời tràn ngập sức sống. Những ngày hè, tiếng ve kêu râm ran trên vòm cây xanh lá, khi ấy, cây đa nơi đầu đình là nơi đông người tập trung nhất.</div>
+                                        </div>
+
+                                        <div class="app-content-list-item-action-bar">
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg width="24" height="24">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path fill="currentColor" d="M9.5 19h10a.5.5 0 110 1h-10a.5.5 0 110-1z"></path>
+                                                        <path stroke="currentColor" d="M4.42 16.03a1.5 1.5 0 00-.43.9l-.22 2.02a.5.5 0 00.55.55l2.02-.21a1.5 1.5 0 00.9-.44L18.7 7.4a1.5 1.5 0 000-2.12l-.7-.7a1.5 1.5 0 00-2.13 0L4.42 16.02z"></path>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-reach-tooltip-trigger="">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm10 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM7 8h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/comments.svg">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M11.707 20.793A1 1 0 0 1 10 20.086V18H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.5l-2.793 2.793zM11 20.086L14.086 17H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h6v3.086z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn app-content-list-item-action-bar-etc-btn">
+                                                <svg width="15" height="3">
+                                                    <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="app-content-list-item-inbox">
+                                        <div class="app-content-list-item-inbox-text">
+                                            inbox
+                                        </div>
+                                        <div class="app-content-list-item-inbox-icon">
+                                            <svg width="12" height="12" viewBox="0 0 16 16" class="project_icon project_icon_inbox">
+                                                <g fill="currentColor">
+                                                    <path d="M13.5 9.5V12a1.5 1.5 0 01-1.5 1.5H4A1.5 1.5 0 012.5 12V9.5h3.75a1.75 1.75 0 003.5 0h3.75z" opacity="0.1"></path>
+                                                    <path d="M10.491 2a2 2 0 011.923 1.45l1.509 5.28a2 2 0 01.077.55V12a2 2 0 01-2 2H4a2 2 0 01-2-2V9.28a2 2 0 01.077-.55l1.509-5.28A2 2 0 015.509 2h4.982zm0 1H5.51a1 1 0 00-.962.725l-1.509 5.28A1 1 0 003 9.28V12a1 1 0 001 1h8a1 1 0 001-1V9.28a1 1 0 00-.038-.275l-1.51-5.28a1 1 0 00-.96-.725zM6.25 9a.5.5 0 01.5.5 1.25 1.25 0 002.5 0 .5.5 0 01.5-.5h1.75a.5.5 0 110 1h-1.306a2.25 2.25 0 01-4.388 0H4.5a.5.5 0 010-1z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="app-content-list-item">
+                                    <div class="app-content-list-item-container">
+                                        <div class="app-content-list-item-circle-move-and-text-wrapper">
+                                            <span class="app-content-list-item-move-item">
+                                                <svg width="24" height="24">
+                                                    <path fill="currentColor" d="M14.5 15.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 15.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 15.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 10.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 10.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 5.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 5.5z"></path>
+                                                </svg>
+                                            </span>
+                                            <button class="app-content-list-item-circle" type="button" role="checkbox">
+                                                <svg class="app-content-list-item-circle-check-icon" width="24  " height="24">
+                                                    <path fill="currentColor" d="M11.23 13.7l-2.15-2a.55.55 0 0 0-.74-.01l.03-.03a.46.46 0 0 0 0 .68L11.24 15l5.4-5.01a.45.45 0 0 0 0-.68l.02.03a.55.55 0 0 0-.73 0l-4.7 4.35z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="app-content-list-item-text">Quê hương em mới tươi đẹp làm sao! Những con đường làng quanh co trải dài típ tắp. Hai bên đường là những lũy tre xanh rì rào trong gió. Con đường đất trải dài đến vô tận. Bốn mùa xuân, hạ, thu, đông, quê hương em đều có những vẻ đẹp rất riêng. Xuân về quê em như thay áo mới, màu sắc của chồi non của hoa màu bung nở rực rỡ làm lên một vùng đất trời tràn ngập sức sống. Những ngày hè, tiếng ve kêu râm ran trên vòm cây xanh lá, khi ấy, cây đa nơi đầu đình là nơi đông người tập trung nhất.</div>
+                                        </div>
+
+                                        <div class="app-content-list-item-action-bar">
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg width="24" height="24">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path fill="currentColor" d="M9.5 19h10a.5.5 0 110 1h-10a.5.5 0 110-1z"></path>
+                                                        <path stroke="currentColor" d="M4.42 16.03a1.5 1.5 0 00-.43.9l-.22 2.02a.5.5 0 00.55.55l2.02-.21a1.5 1.5 0 00.9-.44L18.7 7.4a1.5 1.5 0 000-2.12l-.7-.7a1.5 1.5 0 00-2.13 0L4.42 16.02z"></path>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-reach-tooltip-trigger="">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm10 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM7 8h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/comments.svg">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M11.707 20.793A1 1 0 0 1 10 20.086V18H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.5l-2.793 2.793zM11 20.086L14.086 17H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h6v3.086z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn app-content-list-item-action-bar-etc-btn">
+                                                <svg width="15" height="3">
+                                                    <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="app-content-list-item-inbox">
+                                        <div class="app-content-list-item-inbox-text">
+                                            inbox
+                                        </div>
+                                        <div class="app-content-list-item-inbox-icon">
+                                            <svg width="12" height="12" viewBox="0 0 16 16" class="project_icon project_icon_inbox">
+                                                <g fill="currentColor">
+                                                    <path d="M13.5 9.5V12a1.5 1.5 0 01-1.5 1.5H4A1.5 1.5 0 012.5 12V9.5h3.75a1.75 1.75 0 003.5 0h3.75z" opacity="0.1"></path>
+                                                    <path d="M10.491 2a2 2 0 011.923 1.45l1.509 5.28a2 2 0 01.077.55V12a2 2 0 01-2 2H4a2 2 0 01-2-2V9.28a2 2 0 01.077-.55l1.509-5.28A2 2 0 015.509 2h4.982zm0 1H5.51a1 1 0 00-.962.725l-1.509 5.28A1 1 0 003 9.28V12a1 1 0 001 1h8a1 1 0 001-1V9.28a1 1 0 00-.038-.275l-1.51-5.28a1 1 0 00-.96-.725zM6.25 9a.5.5 0 01.5.5 1.25 1.25 0 002.5 0 .5.5 0 01.5-.5h1.75a.5.5 0 110 1h-1.306a2.25 2.25 0 01-4.388 0H4.5a.5.5 0 010-1z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="app-content-list-item">
+                                    <div class="app-content-list-item-container">
+                                        <div class="app-content-list-item-circle-move-and-text-wrapper">
+                                            <span class="app-content-list-item-move-item">
+                                                <svg width="24" height="24">
+                                                    <path fill="currentColor" d="M14.5 15.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 15.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 15.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 10.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 10.5zm5-5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 0114.5 5.5zm-5 0a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 019.5 5.5z"></path>
+                                                </svg>
+                                            </span>
+                                            <button class="app-content-list-item-circle" type="button" role="checkbox">
+                                                <svg class="app-content-list-item-circle-check-icon" width="20  " height="20">
+                                                    <path fill="currentColor" d="M11.23 13.7l-2.15-2a.55.55 0 0 0-.74-.01l.03-.03a.46.46 0 0 0 0 .68L11.24 15l5.4-5.01a.45.45 0 0 0 0-.68l.02.03a.55.55 0 0 0-.73 0l-4.7 4.35z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="app-content-list-item-text">Task 1</div>
+                                        </div>
+
+                                        <div class="app-content-list-item-action-bar">
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg width="24" height="24">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path fill="currentColor" d="M9.5 19h10a.5.5 0 110 1h-10a.5.5 0 110-1z"></path>
+                                                        <path stroke="currentColor" d="M4.42 16.03a1.5 1.5 0 00-.43.9l-.22 2.02a.5.5 0 00.55.55l2.02-.21a1.5 1.5 0 00.9-.44L18.7 7.4a1.5 1.5 0 000-2.12l-.7-.7a1.5 1.5 0 00-2.13 0L4.42 16.02z"></path>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-reach-tooltip-trigger="">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6zm10 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM7 8h10a.5.5 0 1 1 0 1H7a.5.5 0 0 1 0-1z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-svgs-path="sm1/comments.svg">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M11.707 20.793A1 1 0 0 1 10 20.086V18H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.5l-2.793 2.793zM11 20.086L14.086 17H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h6v3.086z"></path>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="app-content-list-item-action-bar-btn app-content-list-item-action-bar-etc-btn">
+                                                <svg width="15" height="3">
+                                                    <path d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="app-content-list-item-inbox">
+                                        <div class="app-content-list-item-inbox-text">
+                                            inbox
+                                        </div>
+                                        <div class="app-content-list-item-inbox-icon">
+                                            <svg width="12" height="12" viewBox="0 0 16 16" class="project_icon project_icon_inbox">
+                                                <g fill="currentColor">
+                                                    <path d="M13.5 9.5V12a1.5 1.5 0 01-1.5 1.5H4A1.5 1.5 0 012.5 12V9.5h3.75a1.75 1.75 0 003.5 0h3.75z" opacity="0.1"></path>
+                                                    <path d="M10.491 2a2 2 0 011.923 1.45l1.509 5.28a2 2 0 01.077.55V12a2 2 0 01-2 2H4a2 2 0 01-2-2V9.28a2 2 0 01.077-.55l1.509-5.28A2 2 0 015.509 2h4.982zm0 1H5.51a1 1 0 00-.962.725l-1.509 5.28A1 1 0 003 9.28V12a1 1 0 001 1h8a1 1 0 001-1V9.28a1 1 0 00-.038-.275l-1.51-5.28a1 1 0 00-.96-.725zM6.25 9a.5.5 0 01.5.5 1.25 1.25 0 002.5 0 .5.5 0 01.5-.5h1.75a.5.5 0 110 1h-1.306a2.25 2.25 0 01-4.388 0H4.5a.5.5 0 010-1z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="app-content-list-item app-content-list-item-add-item">
+                                    <button type="button" class="app-content-list-item-add-btn">
+                                        <span class="app-content-list-item-icon-add-label">
+                                            <svg class="app-content-list-item-icon-add" width="13" height="13">
+                                                <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="#dd4b39" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                        Add task
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>

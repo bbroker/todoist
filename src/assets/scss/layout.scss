@@ -1,0 +1,34 @@
+@import "fonts";
+@import "variables";
+@import "logo.scss";
+@import "icon.scss";
+
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    color: #202020;
+    
+}
+
+body {
+    margin:0;
+   
+}
+
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    }
+
+    to { 
+        opacity: 1
+    }
+}
